@@ -6,13 +6,12 @@
     <title>Login Page</title>
 </head>
 <body>
-    <h2>Login A v.2</h2>
+    <h2>Login B v.4</h2>
     <form action="password.html" method="GET">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" autocomplete="username" required>
-        <br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" autocomplete="current-password" required>
+        <label style="display: none" for="password">Password:</label>
+        <input style="display: none" type="password" id="password" name="password" autocomplete="current-password">
         <br><br>
         <button type="submit">Submit</button>
         <br><br>
@@ -20,11 +19,21 @@
     </form>
     <script>
         const passwordField = document.getElementById('password');
+        const usernameField = document.getElementById('username');
         const output = document.getElementById('output');
         passwordField.addEventListener('input', (event) => {
             console.log('Password field has changed!', passwordField.value);
+            alert(`Initiating autoling with ${usernameField.value} and ${passwordField.value}`)
             output.innerText = passwordField.value;
         });
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            if ( passwordField.value !== "" ) {
+                event.preventDefault(); // Prevent the form from being submitted
+                console.log('Form submission has been disabled!');
+            }
+        });
+
     </script>
 </body>
 </html>
