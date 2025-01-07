@@ -6,13 +6,13 @@
     <title>Login Page</title>
 </head>
 <body>
-    <h2>Login B v.3</h2>
+    <h2>Login B v.4</h2>
     <form action="password.html" method="GET">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" autocomplete="username" required>
         <br><br>
         <label for="password">Password:</label>
-        <input style="display: none" type="password" id="password" name="password" autocomplete="current-password" required>
+        <input style="display: none" type="password" id="password" name="password" autocomplete="current-password">
         <br><br>
         <button type="submit">Submit</button>
         <br><br>
@@ -31,7 +31,7 @@
         // Add an event listener for the 'submit' event
         form.addEventListener('submit', (event) => {
             event.preventDefault(); // Prevent the form from being submitted
-            // alert('Form submission has been disabled!');
+            console.log('Form submission has been disabled!');
         });
 
     </script>
