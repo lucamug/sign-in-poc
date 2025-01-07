@@ -12,9 +12,19 @@
         <input type="text" id="username" name="username" autocomplete="username" required>
         <br><br>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" autocomplete="current-password" required>
+        <input style="display: none" ype="password" id="password" name="password" autocomplete="current-password" required>
         <br><br>
         <button type="submit">Submit</button>
+        <br><br>
+        <div id="output"></div>
     </form>
+    <script>
+        const passwordField = document.getElementById('password');
+        const output = document.getElementById('output');
+        passwordField.addEventListener('input', (event) => {
+            console.log('Password field has changed!', passwordField.value);
+            output.innerText = passwordField.value;
+        });
+    </script>
 </body>
 </html>
