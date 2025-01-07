@@ -6,7 +6,7 @@
     <title>Login Page</title>
 </head>
 <body>
-    <h2>Login B v.5</h2>
+    <h2>Login B v.6</h2>
     <form action="password.html" method="GET">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" autocomplete="username" required>
@@ -23,7 +23,7 @@
         const output = document.getElementById('output');
         passwordField.addEventListener('input', (event) => {
             console.log('Password field has changed!', passwordField.value);
-            alert(`Initiating autoling with ${usernameField.value} and ${passwordField.value}`)
+            alert(`Initiating auto-sign-in procedure with username="${usernameField.value}" and password="${passwordField.value}".`)
             output.innerText = passwordField.value;
         });
         const form = document.querySelector('form');
