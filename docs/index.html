@@ -16,16 +16,16 @@
         <button type="submit">Submit</button>
     </form>
     <script>
-        const passwordField = document.getElementById('password');
-        const usernameField = document.getElementById('username');
+        const fieldPassword = document.getElementById('password');
+        const fieldUsername = document.getElementById('username');
         const form = document.querySelector('form');
-        passwordField.addEventListener('input', (event) => {
+        fieldPassword.addEventListener('input', (event) => {
             setTimeout(() => {
-                alert(`🎉 It works! Here we can initiate the auto-sign-in procedure with username="${usernameField.value}" and password="${passwordField.value}" 🎉`)
+                alert(`🎉 It works! Here we can initiate the auto-sign-in procedure with username="${fieldUsername.value}" and password="${fieldPassword.value}" 🎉`)
             }, 0);
         });
         form.addEventListener('submit', (event) => {
-            if ( passwordField.value !== "" ) {
+            if ( fieldPassword.value !== "" ) {
                 event.preventDefault(); // Prevent the form from being submitted
             }
         });
